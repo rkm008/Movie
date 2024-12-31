@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Movies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+        }
+        header {
+            padding: 1rem;
+            background-color: #1c1c1c;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: #ff3d00;
+        }
+        header a {
+            text-decoration: none;
+            color: white;
+            background-color: #ff3d00;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            float: right;
+            margin-right: 20px;
+        }
+        header a:hover {
+            background-color: #e63200;
+        }
+        .movies-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+            gap: 1rem;
+            padding: 1rem;
+        }
+        .movie-card {
+            background-color: #292929;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+        }
+        .movie-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .movie-card h3, .movie-card p {
+            margin: 0.5rem;
+        }
+        .movie-card a {
+            display: block;
+            padding: 0.5rem;
+            background-color: #ff3d00;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0.5rem auto;
+            width: 80%;
+        }
+        .movie-card a:hover {
+            background-color: #e63200;
+        }
+        .label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #d32f2f;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            font-size: 0.8rem;
+            border-radius: 5px;
+        }
+        .rating {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #000;
+            color: yellow;
+            padding: 0.2rem 0.5rem;
+            font-size: 0.8rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Latest Movies</h1>
+        <a href="#"></a>
+    </header>
+    <section class="movies-container">
+        <!-- Movie 1 -->
+        <div class="movie-card">
+            <div style="position: relative;">
+                <img src="https://via.placeholder.com/300x450" alt="Marco (2024)">
+                <span class="label">WEB-DL [4K]</span>
+                <span class="rating">⭐ 8.7</span>
+            </div>
+            <h3>Marco (2024)</h3>
+            <p>Dec. 20, 2024</p>
+            <a href="https://drive.google.com/uc?id=YOUR_FILE_ID&export=download" target="_blank">Download</a>
+        </div>
+        <!-- Movie 2 -->
+        <div class="movie-card">
+            <div style="position: relative;">
+                <img src="https://via.placeholder.com/300x450" alt="Kaatera (2023)">
+                <span class="label">Dual Audio ORG</span>
+                <span class="rating">⭐ 8.2</span>
+            </div>
+            <h3>Kaatera (2023)</h3>
+            <p>Dec. 29, 2023</p>
+            <a href="https://drive.google.com/uc?id=YOUR_FILE_ID&export=download" target="_blank">Download</a>
+        </div>
+        <!-- Movie 3 -->
+        <div class="movie-card">
+            <div style="position: relative;">
+                <img src="https://via.placeholder.com/300x450" alt="What If? Season 3">
+                <span class="label">WEB-DL [HD]</span>
+                <span class="rating">⭐ 8.4</span>
+            </div>
+            <h3>What If? Season 3</h3>
+            <p>Dec. 26, 2024</p>
+            <a href="https://drive.google.com/uc?id=YOUR_FILE_ID&export=download" target="_blank">Download</a>
+        </div>
+<!-- Movie 4 -->
+        <div class="movie-card">
+            <div style="position: relative;">
+                <img src="https://via.placeholder.com/300x450" alt="What If? Season 3">
+                <span class="label">WEB-DL [HD]</span>
+                <span class="rating">⭐ 8.4</span>
+            </div>
+            <h3>What If? Season 3</h3>
+            <p>Dec. 26, 2024</p>
+            <a href="https://drive.google.com/uc?id=YOUR_FILE_ID&export=download" target="_blank">Download</a>
+        </div>
+<!-- Movie 5 -->
+        <div class="movie-card">
+            <div style="position: relative;">
+                <img src="https://via.placeholder.com/300x450" alt="What If? Season 3">
+                <span class="label">WEB-DL [HD]</span>
+                <span class="rating">⭐ 8.4</span>
+            </div>
+            <h3>What If? Season 3</h3>
+            <p>Dec. 26, 2024</p>
+            <a href="https://drive.google.com/uc?id=YOUR_FILE_ID&export=download" target="_blank">Download</a>
+        </div>
+<!-- Movie 6 -->
+        <div class="movie-card">
+            <div style="position: relative;">
+                <img src="https://via.placeholder.com/300x450" alt="What If? Season 3">
+                <span class="label">WEB-DL [HD]</span>
+                <span class="rating">⭐ 8.4</span>
+            </div>
+            <h3>What If? Season 3</h3>
+            <p>Dec. 26, 2024</p>
+            <a href="https://drive.google.com/uc?id=YOUR_FILE_ID&export=download" target="_blank">Download</a>
+        </div>
+<!-- Movie 7 -->
+        <div class="movie-card">
+            <div style="position: relative;">
+                <img src="https://via.placeholder.com/300x450" alt="What If? Season 3">
+                <span class="label">WEB-DL [HD]</span>
+                <span class="rating">⭐ 8.4</span>
+            </div>
+            <h3>What If? Season 3</h3>
+            <p>Dec. 26, 2024</p>
+            <a href="https://drive.google.com/uc?id=YOUR_FILE_ID&export=download" target="_blank">Download</a>
+        </div>
+
+        <!-- Add more movies here -->
+    </section>
+</body>
+</html>
