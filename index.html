@@ -5,46 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latest Movies</title>
     <style>
+        :root {
+            --primary-color: #ff3d00;
+            --secondary-color: #e63200;
+            --background-color: #121212;
+            --header-background: #1c1c1c;
+            --card-background: #292929;
+            --text-color: white;
+            --rating-color: yellow;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212;
-            color: white;
+            background-color: var(--background-color);
+            color: var(--text-color);
         }
         header {
             padding: 1rem;
-            background-color: #1c1c1c;
+            background-color: var(--header-background);
             text-align: center;
+            position: relative;
         }
         header h1 {
             margin: 0;
-            color: #ff3d00;
+            color: var(--primary-color);
         }
         header a {
             text-decoration: none;
-            color: white;
-            background-color: #ff3d00;
+            color: var(--text-color);
+            background-color: var(--primary-color);
             padding: 0.5rem 1rem;
             border-radius: 5px;
-            float: right;
-            margin-right: 20px;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
         }
         header a:hover {
-            background-color: #e63200;
+            background-color: var(--secondary-color);
         }
         .movies-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+            grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
             padding: 1rem;
         }
         .movie-card {
-            background-color: #292929;
+            background-color: var(--card-background);
             border-radius: 10px;
             overflow: hidden;
             position: relative;
             text-align: center;
+            padding: 0 0 1rem;
+            transform: translateY(30px);
+            opacity: 0;
+            animation: fadeInUp 0.5s forwards;
         }
         .movie-card img {
             width: 100%;
@@ -57,22 +73,22 @@
         .movie-card a {
             display: block;
             padding: 0.5rem;
-            background-color: #ff3d00;
-            color: white;
+            background-color: var(--primary-color);
+            color: var(--text-color);
             text-decoration: none;
             border-radius: 5px;
             margin: 0.5rem auto;
             width: 80%;
         }
         .movie-card a:hover {
-            background-color: #e63200;
+            background-color: var(--secondary-color);
         }
         .label {
             position: absolute;
             top: 10px;
             left: 10px;
             background-color: #d32f2f;
-            color: white;
+            color: var(--text-color);
             padding: 0.2rem 0.5rem;
             font-size: 0.8rem;
             border-radius: 5px;
@@ -82,25 +98,36 @@
             bottom: 10px;
             right: 10px;
             background-color: #000;
-            color: yellow;
+            color: var(--rating-color);
             padding: 0.2rem 0.5rem;
             font-size: 0.8rem;
             border-radius: 5px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Latest Movies</h1>
-        <a href="#"></a>
+        <a href="#">Home</a>
     </header>
     <section class="movies-container">
         <!-- Movie 1 -->
         <div class="movie-card">
             <div style="position: relative;">
-                <img src="https://upload.wikimedia.org/wikipedia/en/2/25/Red_One_poster.jpg" alt="Red One Poster" width="300" height="450">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/25/Red_One_poster.jpg" alt="Red One Poster">
                 <span class="label">WEB-DL 1080</span>
-                <span class="rating">⭐ </span>
+                <span class="rating">⭐</span>
             </div>
             <h3>Red One (2024)</h3>
             <p>Date 2024</p>
@@ -109,11 +136,11 @@
         <!-- Movie 2 -->
         <div class="movie-card">
             <div style="position: relative;">
-                <img src="https://upload.wikimedia.org/wikipedia/en/0/0b/Mufasa_The_Lion_King_Movie_2024.jpeg" alt="Mufasa: The Lion King (2024)" width="300" height="450">
+                <img src="https://upload.wikimedia.org/wikipedia/en/0/0b/Mufasa_The_Lion_King_Movie_2024.jpeg" alt="Mufasa: The Lion King (2024)">
                 <span class="label">Dual Audio ORG</span>
-                <span class="rating">⭐ </span>
+                <span class="rating">⭐</span>
             </div>
-            <h3>Mufasa: The Lion King(2024)</h3>
+            <h3>Mufasa: The Lion King (2024)</h3>
             <p>Date, 2024</p>
             <a href="https://allset.lol/viEw1MjE5ODU?download=mai">Download</a>
         </div>
@@ -122,13 +149,13 @@
             <div style="position: relative;">
                 <img src="https://upload.wikimedia.org/wikipedia/en/7/73/Moana_2_poster.jpg" alt="Moana 2">
                 <span class="label">WEB-DL [HD]</span>
-                <span class="rating">⭐ </span>
+                <span class="rating">⭐</span>
             </div>
             <h3>Moana 2</h3>
-            <p>Date2024</p>
+            <p>Date 2024</p>
             <a href="https://allset.lol/viEw1MjIwMjM?download=main">Download</a>
         </div>
-<!-- Movie 4 -->
+        <!-- Movie 4 -->
         <div class="movie-card">
             <div style="position: relative;">
                 <img src="https://via.placeholder.com/300x450" alt="What If? Season 3">
@@ -139,40 +166,6 @@
             <p>Dec. 26, 2024</p>
             <a href="https://drive.google.com/uc?id=YOUR_FILE_ID&export=download" target="_blank">Download</a>
         </div>
-<!-- Movie 5 -->
-        <div class="movie-card">
-            <div style="position: relative;">
-                <img src="https://via.placeholder.com/300x450" alt="What If? Season 3">
-                <span class="label">WEB-DL [HD]</span>
-                <span class="rating">⭐ 8.4</span>
-            </div>
-            <h3>What If? Season 3</h3>
-            <p>Dec. 26, 2024</p>
-            <a href="https://drive.google.com/uc?id=YOUR_FILE_ID&export=download" target="_blank">Download</a>
-        </div>
-<!-- Movie 6 -->
-        <div class="movie-card">
-            <div style="position: relative;">
-                <img src="https://via.placeholder.com/300x450" alt="What If? Season 3">
-                <span class="label">WEB-DL [HD]</span>
-                <span class="rating">⭐ 8.4</span>
-            </div>
-            <h3>What If? Season 3</h3>
-            <p>Dec. 26, 2024</p>
-            <a href="https://drive.google.com/uc?id=YOUR_FILE_ID&export=download" target="_blank">Download</a>
-        </div>
-<!-- Movie 7 -->
-        <div class="movie-card">
-            <div style="position: relative;">
-                <img src="https://via.placeholder.com/300x450" alt="What If? Season 3">
-                <span class="label">WEB-DL [HD]</span>
-                <span class="rating">⭐ 8.4</span>
-            </div>
-            <h3>What If? Season 3</h3>
-            <p>Dec. 26, 2024</p>
-            <a href="https://drive.google.com/uc?id=YOUR_FILE_ID&export=download" target="_blank">Download</a>
-        </div>
-
         <!-- Add more movies here -->
     </section>
 </body>
